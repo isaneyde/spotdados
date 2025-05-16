@@ -1,11 +1,10 @@
 
 import './App.css'
-import { Sign } from './pages/sign-in'
 
 function App() {
   return (
     <>
-    <Sign/>
+     <h1 className='text-2xl '> Hello </h1>
     </>
   )
 }
