@@ -1,4 +1,3 @@
-
 import { EyeSlashIcon } from "@phosphor-icons/react";
 const style = "border-1 rounded-2xl py-0 px-4 text-center bg-white min-w-50 max-w-50";
 export const Sign = () => {

@@ -53,12 +53,12 @@ export const UsersList = () => {
               <div className="flex-1">
                 <h3 className="font-medium text-black -800">{user.name}</h3>
                 <div className="mt-2">
-                  <p className="text-sm text-gray-500">Músicas mais ouvidas:</p>
+                  <p className="text-sm text-black -500">Músicas mais ouvidas:</p>
                   <div className="flex flex-wrap gap-1 mt-1">
                     {user.mostListenedSongs.map((song, index) => (
                       <span
                         key={index}
-                        className="text-xs bg-orange-500 px-2 py-1 rounded"
+                        className="text-xs bg-gray-100 px-2 py-1 rounded"
                       >
                         {song}
                       </span>
