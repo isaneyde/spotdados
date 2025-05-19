@@ -1,3 +1,9 @@
+import { useState } from "react"
+import type { userProps } from "../types/users"
+import { users } from "../data/data"
+import { Header } from "../components/header"
+import { HouseIcon } from "@phosphor-icons/react";
+
 
 
 export const UsersList = () => {
@@ -57,8 +63,9 @@ export const UsersList = () => {
 
 
       <div className="h-14 border-t flex items-center justify-center">
-        <Home className="h-6 w-6 text-gray-500" />
+        <HouseIcon className="h-6 w-6 text-gray-500" />
       </div>
     </div>
+    </>
   );
 };
