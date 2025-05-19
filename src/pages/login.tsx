@@ -15,8 +15,6 @@ export const Login = () => {
          <Check size={32}  color="black" weight="fill" />
         <input className="tex-white text-center border-1 rounded-2xl  "    type="password" placeholder="Password" required /> 
      <Eye size={32} color="black" weight="fill" />
-
-
         <NavLink className="p-3 rounded-3xl bg-amber-400 font:bold text-center "  type="submit" to="/list-users">Entrar</NavLink>
     
       </form>
