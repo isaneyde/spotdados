@@ -1,6 +1,7 @@
 import {NavLink } from "react-router-dom";
 export const Home = () => {
     return (
+
         <body className="py-10 bg-black text-black font-bold">
             <div>
                 <h1 className=" font-YuseiMagic text-[32px] m-15 text-2xl text-center text-white"> Ola, bem vindo(a)</h1>
@@ -14,10 +15,8 @@ export const Home = () => {
                    
                 </section>
             </div>
-
-        </body>
-
-    );
+      </body>
+    )
 };
 
 
