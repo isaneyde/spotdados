@@ -51,7 +51,6 @@ export const UsersList = () => {
             >
               <div className="flex-1">
                 <h3 className="font-medium text-black -800">{user.name}</h3>
-<<<<<<< HEAD
                 <div className="mt-2">
                   <p className="text-sm text-black -500">Músicas mais ouvidas:</p>
                   <div className="flex flex-wrap gap-1 mt-1">
@@ -65,8 +64,6 @@ export const UsersList = () => {
                     ))}
                   </div>
                 </div>
-=======
->>>>>>> 4c9fc9e21e0a723d8ea105b4969ed92e403b6374
               </div>
             </li>
           ))}
