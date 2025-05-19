@@ -9,13 +9,15 @@ export const Home = () => {
   <section>
                     <NavLink className="flex justify-around bg-amber-400 m-20 p-4 w-2xs rounded-full shadow-md" to="/Login">Login
                     </NavLink>
-                     <NavLink className="flex justify-around bg-amber-400 m-20 p-4 w-2xs rounded-full shadow-md" to="Sign">Criar Conta
+                     <NavLink className="flex justify-around bg-amber-400 m-20 p-4 w-2xs rounded-full shadow-md" to="/Sign-in">Criar Conta
                     </NavLink>
-                   
+
                 </section>
             </div>
-      </body>
-    )
+
+        </body>
+
+    );
 };
 
 
