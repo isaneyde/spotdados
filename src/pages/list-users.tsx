@@ -1,47 +1,30 @@
-import { useState } from 'react';
-import type { userProps } from '../types/users';
-import { users } from '../data/data';
 
-import { UserIcon,MagnifyingGlassIcon, HouseIcon } from '@phosphor-icons/react';
 
 export const UsersList = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [displayedUsers, setDisplayedUsers] = useState<userProps[]>(users);
+  const [searchQuery, setSearchQuery] = useState('')
+  const [displayedUsers, setDisplayedUsers] = useState<userProps[]>(users)
 
   const handleSearch = (query: string) => {
-    setSearchQuery(query);
-    const filtered = users.filter(user =>
+    setSearchQuery(query)
+    const filtered = users.filter((user) =>
       user.name.toLowerCase().includes(query.toLowerCase())
-    );
-    setDisplayedUsers(filtered);
-  };
+    )
+    setDisplayedUsers(filtered)
+  }
 
   return (
-    
-    <div className="flex flex-col h-screen bg-white">
-
-      <div className="flex justify-between items-center p-4 border-b">
-        <div className="w-6 h-6">
-          <UserIcon className="text-black -800" size={24} strokeWidth={2} />
-      
+    <>
+     <Header />
+      <div>
+        <div className="px-4 py-3">
+          <input
+            type="text"
+            placeholder="Pesquisar usuários..."
+            className="w-full p-2 border rounded-lg"
+            value={searchQuery}
+            onChange={(e) => handleSearch(e.target.value)}
+          />
         </div>
-        <div className="text-center font-semibold text-black -80">Usuários</div>
-        <div className="w-6 h-6">
-          <MagnifyingGlassIcon className="text-black -800" size={24} strokeWidth={2} />
-        </div>
-      </div>
-
-
-      <div className="px-4 py-3">
-        <input
-          type="text"
-          placeholder="Pesquisar usuários..."
-          className="w-full p-2 border rounded-lg"
-          value={searchQuery}
-          onChange={(e) => handleSearch(e.target.value)}
-        />
-      </div>
-
 
       <div className="flex-1 overflow-y-auto px-4">
         <h2 className="text-lg font-semibold my-3">Usuários</h2>
@@ -74,7 +57,7 @@ export const UsersList = () => {
 
 
       <div className="h-14 border-t flex items-center justify-center">
-        <HouseIcon className="h-6 w-6 text-gray-500" />
+        <Home className="h-6 w-6 text-gray-500" />
       </div>
     </div>
   );
