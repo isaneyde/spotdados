@@ -2,7 +2,7 @@ import { useState } from 'react';
 import type { userProps } from '../types/users';
 import { users } from '../data/data';
 import { User, Search, Home } from "lucide-react"; // Using Lucide-React icons
-
+//import { Footer } from "../components/footer";
 export const UsersList = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [displayedUsers, setDisplayedUsers] = useState<userProps[]>(users);

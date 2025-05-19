@@ -1,3 +1,4 @@
+import { Footer } from "../components/footer";
 export const Home = () => {
     return (
         <body className="py-10 bg-black text-black font-bold">
