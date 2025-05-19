@@ -10,7 +10,7 @@ export const Home = () => {
                     <NavLink className="bg-amber-400 m-10 p-4 w-2xs rounded-full shadow-md" to="/Login">
 Login
                     </NavLink>
-                         <NavLink className="bg-amber-400 m-10 p-4 w-2xs rounded-full shadow-md" to="Sign">
+                         <NavLink className="bg-amber-400 m-10 p-4 w-2xs rounded-full shadow-md" to="/Sign-in">
                         Criar Conta
                     </NavLink>
                    
