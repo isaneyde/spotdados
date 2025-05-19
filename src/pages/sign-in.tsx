@@ -15,7 +15,7 @@ export const Sign = () => {
                     <input className={style} type="date" placeholder="dd/mm/yy" />
                     <input className={style} type="text" placeholder="País" />
                     <input className={style} type="password" placeholder="Password" />
-                    <EyeSlashIcon size={24} weight="fill" className="" />
+                     <EyeSlashIcon size={24} weight="fill" className="" />
 
                     <button type="submit" className="p-3 rounded-3xl bg-amber-400 font-bold text-center"> Criar conta</button>
                 </form>

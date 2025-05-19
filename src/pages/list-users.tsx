@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import type { userProps } from '../types/users';
 import { users } from '../data/data';
-import { User, Search, Home } from "lucide-react"; // Using Lucide-React icons
+
+import { UserIcon,MagnifyingGlassIcon, HouseIcon } from '@phosphor-icons/react';
 
 export const UsersList = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -21,12 +22,12 @@ export const UsersList = () => {
 
       <div className="flex justify-between items-center p-4 border-b">
         <div className="w-6 h-6">
-          <User className="text-black -800" size={24} strokeWidth={2} />
+          <UserIcon className="text-black -800" size={24} strokeWidth={2} />
       
         </div>
         <div className="text-center font-semibold text-black -80">Usuários</div>
         <div className="w-6 h-6">
-          <Search className="text-black -800" size={24} strokeWidth={2} />
+          <MagnifyingGlassIcon className="text-black -800" size={24} strokeWidth={2} />
         </div>
       </div>
 
@@ -73,7 +74,7 @@ export const UsersList = () => {
 
 
       <div className="h-14 border-t flex items-center justify-center">
-        <Home className="h-6 w-6 text-gray-500" />
+        <HouseIcon className="h-6 w-6 text-gray-500" />
       </div>
     </div>
   );
