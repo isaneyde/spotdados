@@ -1,10 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Sign } from "./pages/sign-in";
-import { UsersList } from "./pages/list-users";
-import { Login } from "./pages/login";
-import { ListMusic } from "lucide-react";
+import { Home, Sign,Login,UsersList, ListMusic} from "./pages";
+
 
 const router = createBrowserRouter([
+   {
+    path: "/",
+    element: <Home/>,
+  },
   {
     path: "/sign-in",
     element: <Sign/>,
