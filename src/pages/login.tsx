@@ -1,4 +1,6 @@
 import { Eye, Check } from "@phosphor-icons/react";
+import { NavLink } from "react-router-dom";
+
 
 export const Login = () => {
     return(
@@ -14,7 +16,8 @@ export const Login = () => {
         <input className="tex-white text-center border-1 rounded-2xl  "    type="password" placeholder="Password" required /> 
      <Eye size={32} color="black" weight="fill" />
 
-        <button className="p-3 rounded-3xl bg-amber-400 font:bold text-center "  type="submit">Entrar</button>
+
+        <NavLink className="p-3 rounded-3xl bg-amber-400 font:bold text-center "  type="submit" to="/list-users">Entrar</NavLink>
     
       </form>
         </div>
