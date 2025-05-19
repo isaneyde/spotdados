@@ -7,7 +7,7 @@ const style =
 export const Login = () => {
   return (
     <>
-    <body className="py-20 bg-[(public/img/background.png)] bg-black">
+    <div className="py-20 bg-[(public/img/background.png)] bg-black">
       <div>
       <h1 className="text-white text-center px-4 py-2 font-bold mb-10 mt-16">
         Ola, Bem Vindo(a)
@@ -15,11 +15,7 @@ export const Login = () => {
       <div>
         <img className="mb-20" src="public/img/spoti_logo.png" alt="" />
       </div>
-      <h1 className="text-amber-400 font-extrabold text-center">Login</h1>
-      <form
-        action=""
-        className="flex flex-col justify-center justify-items-center gap-8"
-      >
+      <h2 className="text-amber-400 font-extrabold text-center">Login</h2>
         <input
           className={style}
           type="text"
@@ -35,21 +31,21 @@ export const Login = () => {
         <div className="remember=forget flex flex-row justify-around">
           <label className="text-white  font-light"><input type="checkbox" />Remember me</label>
           <a href="#" className="text-white text-center font-light ">Forgot password?</a> </div>
+  
+     <EyeSlashIcon size={32} color="black" weight="fill" />
 
         <NavLink className="p-3 rounded-3xl bg-amber-400 font:bold text-center "  type="submit" to="/list-users">Entrar</NavLink>
-    
-      </form>
+  
         </div>
       <EnvelopeSimpleIcon size={12} weight="regular" color="black" className="ms-90 -mt-108"/>
-      
       <EyeSlashIcon
         size={12}
         weight="regular"
         className="ms-90 mt-35"
         color="black"
       />
-  
-    </body>
+      </div>
+
     </>
     
   );
