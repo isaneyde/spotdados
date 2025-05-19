@@ -13,22 +13,12 @@ export const users: userProps[] = [
   {
     id: 2,
     name: 'Olga Macamo',
-    mostListenedSongs: [
-      'Yolanda Boa',
-      'Rihana',
-      'Cleyton da Drena',
-      'Melony'
-    ],
+    mostListenedSongs: ['Yolanda Boa', 'Rihana', 'Cleyton da Drena', 'Melony'],
   },
   {
     id: 3,
     name: 'Meque Chiziane',
-    mostListenedSongs: [
-       'Mad Mac',
-       'Hernany', 
-       'Dilon Djindji', 
-       'Mistake'
-      ],
+    mostListenedSongs: ['Mad Mac', 'Hernany', 'Dilon Djindji', 'Mistake'],
   },
   {
     id: 4,
@@ -37,16 +27,12 @@ export const users: userProps[] = [
       'Lizha James',
       'Ubakka',
       'Maria Rosa',
-      'Andrea Bocceli',
+      'Percella',
     ],
   },
   {
     id: 5,
     name: 'Esperança Munlela',
-    mostListenedSongs: [
-      'Sia', 
-      'Chris Brown', 
-      'Matias Damasio', 
-      'Banda Kakana'],
+    mostListenedSongs: ['Sia', 'Chris Brown', 'Matias Damasio', 'Banda Kakana'],
   },
 ]
