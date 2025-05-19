@@ -4,17 +4,17 @@ export const users: userProps[] = [
   {
     id: 1,
     name: 'Dulce Chidembue',
-    mostListenedSongs: ['Mabermuda', 'Mr Bow', 'Lil Wainy', 'Liloca'],
+    mostListenedSongs: ['Makhazi', 'Mr Bow', 'Twenty Fingers', 'Nordino Chambal;'],
   },
   {
     id: 2,
     name: 'Olga Macamo',
-    mostListenedSongs: ['Yolanda Boa', 'Rihana', 'Cleyton da Drena', 'Melony'],
+    mostListenedSongs: ['Creed MZ', 'Tamires Moiane', 'Cleyton da Drena', 'Melony'],
   },
   {
     id: 3,
     name: 'Meque Chiziane',
-    mostListenedSongs: ['Mad Mac', 'Hernany', 'Dilon Djindji', 'Mistake'],
+    mostListenedSongs: ['Mad Mec Wonder', 'Eminem', 'Beyonce', 'Button Rose'],
   },
   {
     id: 4,
@@ -23,12 +23,12 @@ export const users: userProps[] = [
       'Lizha James',
       'Ubakka',
       'Maria Rosa',
-      'Andrea Bocceli',
+      'Percella',
     ],
   },
   {
     id: 5,
     name: 'Esperança Munlela',
-    mostListenedSongs: ['Sia', 'Chris Brown', 'Matias Damasio', 'Banda Kakana'],
+    mostListenedSongs: ['Ubakka', 'Ubakka', 'Nkosazana', 'Maria Mandonca'],
   },
 ]
