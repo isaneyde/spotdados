@@ -9,7 +9,7 @@ export const users: userProps[] = [
   {
     id: 2,
     name: 'Olga Macamo',
-    mostListenedSongs: ['Creed MZ', 'Tamires Moiane', 'Cleyton da Drena', 'Melony'],
+    mostListenedSongs: ['Creed MZ', 'Tamires Moiane', 'Makhadzi', 'Melony'],
   },
   {
     id: 3,
