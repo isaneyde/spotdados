@@ -2,19 +2,17 @@ import { useState } from "react";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
 import type { userProps } from '../types/users'
-import { users } from '../data/data'
 
-export const ListMusic = () => {
+
+export const ListMusic = ({user}:{user:userProps}) => {
   const [searchQuery, setSearchQuery] = useState('');
-const [details, setDetails] = useState<userProps[]>(users);
+const [details, setDetails] = useState<string[]>(user.mostListenedSongs);
 
 const handleSearch = (query: string) => {
   setSearchQuery(query);
-  const filtered = users.filter((user) =>
-    user.mostListenedSongs.some((song) =>
-    song.toLowerCase().includes(query.toLowerCase())
+  const filtered = user.mostListenedSongs.filter((list) =>
+    list.toLowerCase().includes(query.toLowerCase())
   )
-)
   setDetails(filtered);
 };
 
@@ -29,10 +27,7 @@ return (
     <main className="flex-1 overflow-y-auto px-4">
              <h2 className="text-lg font-semibold my-3">Usuários</h2>
              <ul className="space-y-3">
-               {details.map((user) => (
-                 <li
-                   key={user.id}
-                   className="border rounded-lg p-3 flex items-start"
+                 <li className="border rounded-lg p-3 flex items-start"
                  >
                    <div className="flex-1">
                      <div className="mt-2">
@@ -40,19 +35,23 @@ return (
                          Músicas mais ouvidas:
                        </p>
                        <div className="flex flex-wrap gap-1 mt-1">
-                         {user.mostListenedSongs.map((song, index) => (
-                           <span
-                             key={index}
-                             className="text-xs bg-orange-500 px-2 py-1 rounded"
-                           >
-                             {song}
-                           </span>
-                         ))}
+                         {details.length > 0 ? (
+            details.map((music, i) => (
+              <span
+                key={i}
+                className="bg-orange-500 text-white px-3 py-1 rounded text-sm"
+              >
+                {music}
+              </span>
+            ))
+          ) : (
+            <p className="text-gray-500">Nenhuma música encontrada…</p>
+          )}
                        </div>
                      </div>
                    </div>
                  </li>
-               ))}
+               
              </ul>
            </main>
    
