@@ -27,7 +27,6 @@ return (
     <main className="flex-1 overflow-y-auto px-4">
              <h2 className="text-lg font-semibold my-3">Usuários</h2>
              <ul className="space-y-3">
-               
                  <li className="border rounded-lg p-3 flex items-start"
                  >
                    <div className="flex-1">
