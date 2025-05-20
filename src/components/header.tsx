@@ -7,12 +7,11 @@ export const Header = ({ title, search, entrySearch }: HeaderProps) => {
 
   return (
     <header className="h-24 border-b bg-black flex justify-between items-center px-4 relative">
-      {/* Logo e Título */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 ">
         <div className="w-20 h-8">
           <img src="/img/spoti_logo.png" alt="logo" className="bg-black" />
         </div>
-        <h1 className="text-white text-lg font-semibold">
+        <h1 className="text-white text-2xl font-semibold pl-8">
           {title === "Usuários" ? "Lista de Usuários" : "Detalhes do Usuário"}
         </h1>
       </div>
