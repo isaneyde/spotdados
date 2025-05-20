@@ -30,7 +30,7 @@ export const Header = ({ title, search, entrySearch }: HeaderProps) => {
       </div>
 
       {seeSearch && (
-        <div className=" right-4 mt-2 w-80 bg-black px-4 py-3 shadow-lg rounded-lg z-50">
+        <div className="right-4 mt-2 w-80 bg-black px-4 py-3 shadow-lg rounded-lg z-50">
           <input
             type="text"
             placeholder={
@@ -38,7 +38,7 @@ export const Header = ({ title, search, entrySearch }: HeaderProps) => {
                 ? 'Pesquisar Usuários...'
                 : 'Pesquisar Músicas...'
             }
-            className= " p-2 border rounded-lg text-black bg-white"
+            className= "p-2 border rounded-lg text-black bg-white"
             value={entrySearch}
             onChange={(e) => search(e.target.value)}
           />
