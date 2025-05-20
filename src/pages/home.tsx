@@ -9,7 +9,7 @@ export const Home = () => {
   <section className="">
                     <NavLink className="flex justify-around bg-amber-400 hover:bg-amber-500 m-12 py-2 p-3 min-w-75 max-w-100 h-10 rounded-full shadow-xl" to="/Login">Login
                     </NavLink>
-                    <NavLink className="flex justify-around bg-amber-400 hover:bg-amber-500 m-12 py-2 p-3 min-w-75 max-w-100 h-10 rounded-full shadow-xl " to="/Sign-in">Criar Conta
+                    <NavLink className="flex justify-around bg-amber-400 hover:bg-yellow-500 m-12 py-2 p-3 min-w-75 max-w-100 h-10 rounded-full shadow-xl " to="/Sign-in">Criar Conta
                     </NavLink>
 
                 </section>
