@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Header } from '../components/header';
 import { users } from '../data/data';
 import {UserSquareIcon } from '@phosphor-icons/react';
+import { Footer } from '../components/footer';
 
 export const UsersList = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -16,8 +17,8 @@ export const UsersList = () => {
     setDisplayedUsers(filtered);
   };
   const present = displayedUsers.map(user => (
-            <li  key={user.id} style={{marginBottom: '0.5rem', border: '5px solid #ccc', borderRadius: '20px' , padding: '0.5rem'}}>
-              <UserSquareIcon size={32} />{user.name}
+            <li  key={user.id} className="mb-8 px-6 py-6 border-5 rounded-3xl solid #ccc text-lg ">
+              <UserSquareIcon size={40} className='inline'/>{user.name }
             </li>
           ))
 
@@ -25,12 +26,14 @@ export const UsersList = () => {
     <>
       <Header title="Usuários" search={handleSearch} entrySearch={searchQuery} />
 
-      <main style={{ height:'100 vh' ,padding: '1rem', background:'black', color:"white"}}>
-        <h2>Usuários</h2>
+      <main className='min-h-screen py-8 px-6 bg-black text-white '>
+        <h2 className='py-5'>Usuários</h2>
         <ul>
         {present}
         </ul>
+        
       </main>
+      <Footer/>
     </>
   );
 };
