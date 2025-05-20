@@ -7,7 +7,7 @@ export const users: userProps[] = [
     mostListenedSongs: [
       'Mabermuda',
       'Mr Bow', 
-      'Lil Wainy', 
+      'Lil Wayne', 
       'Liloca'],
   },
   {
@@ -18,7 +18,7 @@ export const users: userProps[] = [
   {
     id: 3,
     name: 'Meque Chiziane',
-    mostListenedSongs: ['Mad Mac', 'Hernany', 'Dilon Djindji', 'Mistake'],
+    mostListenedSongs: ['Mad Mec Wonder', 'Hernani da Silva', 'Dilon Djindji', 'Mistake'],
   },
   {
     id: 4,
