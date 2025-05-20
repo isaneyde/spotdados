@@ -24,10 +24,10 @@ return (
       title="Detalhes" 
     />
 
-    <main className="flex-1 overflow-y-auto px-4">
-             <h2 className="text-lg font-semibold my-3">Usuários</h2>
+    <main className="min-h-screen flex-1 overflow-y-auto px-4 bg-[url(./img/bg-4.png)]">
+             <h2 className="text-lg font-semibold text-amber-50 my-3">Usuários</h2>
              <ul className="space-y-3">
-                 <li className="border rounded-lg p-3 flex items-start"
+                 <li className="border-4 bg-black  border-amber-50   p-3 flex items-start rounded-3xl   "
                  >
                    <div className="flex-1">
                      <div className="mt-2">
@@ -39,13 +39,15 @@ return (
             details.map((music, i) => (
               <span
                 key={i}
-                className="bg-orange-500 text-white px-3 py-1 rounded text-sm"
+                className="bg-amber-500 text-white  px-3 py-1 rounded text-sm"
               >
                 {music}
               </span>
             ))
           ) : (
             <p className="text-gray-500">Nenhuma música encontrada…</p>
+          
+      
           )}
                        </div>
                      </div>
@@ -56,7 +58,7 @@ return (
            </main>
    
          
-   <Footer />
+   <Footer  />
   </>
 );
 
