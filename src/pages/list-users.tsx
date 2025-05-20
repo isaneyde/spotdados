@@ -1,13 +1,17 @@
 // UsersList.tsx
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import {UserIcon } from '@phosphor-icons/react';
+
 import { Header } from '../components/header';
 import { users } from '../data/data';
-import {UserIcon } from '@phosphor-icons/react';
 import { Footer } from '../components/footer';
+
 
 export const UsersList = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [displayedUsers, setDisplayedUsers] = useState(users);
+  const navigate = useNavigate()
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
@@ -17,9 +21,8 @@ export const UsersList = () => {
     setDisplayedUsers(filtered);
   };
   const present = displayedUsers.map(user => (
-            <li  key={user.id} className="mb-10 w-80 flex bg-black px-6 py-6 border-4  rounded-3xl solid #ccc text-2xl border-white opacity-80 ">
+            <li  key={user.id} className="mb-10 w-80 flex bg-black px-6 py-6 border-4  rounded-3xl solid #ccc text-2xl border-white opacity-80 " onClick={()=>navigate('/list-music',{state:{user}})}>
               <UserIcon size={40}  className='inline fill-amber-50'/>{user.name }
-              
             </li>
           ))
 
