@@ -39,6 +39,7 @@ export const Sign = () => {
 
                         <input required className={style} type="password" placeholder="Password" name="password" hidden maxLength={8} minLength={4} value={password} onChange={(event) => setPassword(event.target.value)} />
 
+
                         <NavLink type="submit" onClick={validateFields} className="p-3 rounded-3xl bg-amber-400 font-bold text-center w-75 mb-15"> Criar conta</NavLink>
                     </form>
                     <EyeSlashIcon size={18} weight="fill" className="ml-78 -mt-44" />
