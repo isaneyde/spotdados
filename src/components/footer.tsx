@@ -9,7 +9,6 @@ import { NavLink } from "react-router-dom"
         <CaretLeftIcon className="h-6 w-6 text-white" />
       </NavLink>
       <HouseIcon className="h-6 w-6 text-white w-fill" />
-
       <NavLink to="/list-music">
         <CaretRightIcon className="h-6 w-6 text-white" />
       </NavLink>
