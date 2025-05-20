@@ -19,17 +19,10 @@ export const UsersList = () => {
 
   return (
     <>
-      <Header />
-
-        <div className="px-4 py-3">
-          <input
-            type="text"
-            placeholder="Pesquisar usuários..."
-            className="w-full p-2 border rounded-lg"
-            value={searchQuery}
-            onChange={(e) => handleSearch(e.target.value)}
-          />
-        </div>
+      <Header 
+      entrySearch={searchQuery}
+      search={handleSearch}
+      title='Usuários'/>
 
         <main className="flex-1 overflow-y-auto px-4">
           <h2 className="text-lg font-semibold my-3">Usuários</h2>
