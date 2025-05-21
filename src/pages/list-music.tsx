@@ -30,7 +30,7 @@ const handleSearch = (query: string) => {
  if (!user) return null
 
  const getImage=(name:string)=>{
-  const file=name.toLowerCase()
+  const file=name.toLowerCase().replace(' ','-')
   return `/img/${file}.png`
  }
 return (
@@ -46,7 +46,7 @@ return (
              <ul className="space-y-3">
                  <li className="border-4 bg-black  border-amber-50 mt-5 py-4 px-3 flex flex-col items-start rounded-3xl   "
                  >
-                       <p className="text-sm text-gray-500">
+                       <p className="text-lg text-gray-500">
                          Músicas mais ouvidas:
                        </p>
                        <div className="flex flex-col gap-1 mt-1">
@@ -54,11 +54,11 @@ return (
             details.map((music, i) => (
               <span
                 key={i}
-                className="flex w-70 justify-between items-center mt-3 bg-amber-500 text-white  px-3 py-1 rounded-2xl text-sm align-middle"
+                className="flex h-20 w-90 justify-between items-center mt-3 bg-amber-500 text-black  px-3 py-1 opacity-70 rounded-2xl text-sm align-middle"
               >
                 <img src = {getImage(music)}
               alt = {music}
-              className="w-24 h-24 rounded-50 object-cover" />
+              className="w-24 h-18 rounded-full object-cover" />
                 <span className="text-2xl font-medium">{music}</span>
               </span>
             ))
