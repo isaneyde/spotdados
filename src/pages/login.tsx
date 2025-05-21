@@ -1,6 +1,7 @@
 import { EyeSlashIcon } from "@phosphor-icons/react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate} from "react-router-dom";
+//import { loginUsers } from "../types/loginUsers";
 
 const style =
   "border-1 rounded-3xl py-0 px-4 bg-white  text-center min-w-75 max-w-100 h-10 m-10 focus: border-amber-400";
@@ -8,19 +9,24 @@ const style =
 export const Login = () => {
   const [email, setEmail] = useState(" ");
   const [password, setPassword] = useState(" ");
+  const Navigate= useNavigate(),
 
 
   function validateFields() {
-    if (email.length > 0 && password.length > 0) {
-      alert("login feito com sucesso");
+    if (email === "" && password ==="" ) { <p className="text-red-600 font-light">Por Favor, preencha os campos vazios</p> 
+     Navigate("/login")
     } 
-      alert("Por favor, preencha os campos");
+    else {
+      /* const Data:loginUsers[]=[] 
+       alert(email:${emsil} password: ${password}) 
+              Navigate("/list-users")*/
+            
     }
-  
+    }
   return (
     <>
       <div className="min-h-screen  bg-black">
-        <h1 className="text-white text-center px-4 py-2 font-extrabold mb-10 mt-16">
+        <h1 className="text-white text-center px-4 py-2 font-extrabold mb-10 mt-16 ">
           OLa, Bem-vindo(a)
         </h1>
         <div>
