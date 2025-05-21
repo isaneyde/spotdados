@@ -25,10 +25,7 @@ const router = createBrowserRouter([
     path: "/list-users",
     element: <UsersList />,
   },
-   {
-    path: "/list-music",
-    element: <ListMusic user={user} />,
-  }
+   
 ]);
 
 export function Routes() {
