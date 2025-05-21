@@ -10,7 +10,7 @@ export const ListMusic = () => {
 const [details, setDetails] = useState<string[]>([]);
 const {state} = useLocation();
 const navigate = useNavigate();
-const user:userProps | undefined = state?.user;;
+const user:userProps | undefined = state?.user;
 
 useEffect(()=>{
   if(!user){
@@ -28,6 +28,11 @@ const handleSearch = (query: string) => {
   setDetails(filtered);
 };
  if (!user) return null
+
+ const getImage=(name:string)=>{
+  const file=name.toLowerCase()
+  return `/img/${file}.png`
+ }
 return (
   <>
     <Header
@@ -37,9 +42,9 @@ return (
     />
 
     <main className="min-h-screen overflow-y-auto px-4 bg-[url(./img/bg-4.png)] bg-black">
-             <h2 className="text-lg font-semibold text-amber-50 my-3">Detalhes</h2>
+             <h2 className="text-lg font-semibold text-amber-50 my-3">{user.name}</h2>
              <ul className="space-y-3">
-                 <li className="border-4 bg-black  border-amber-50   p-3 flex flex-col items-start rounded-3xl   "
+                 <li className="border-4 bg-black  border-amber-50 mt-5 py-4 px-3 flex flex-col items-start rounded-3xl   "
                  >
                        <p className="text-sm text-gray-500">
                          Músicas mais ouvidas:
@@ -49,9 +54,12 @@ return (
             details.map((music, i) => (
               <span
                 key={i}
-                className="bg-amber-500 text-white  px-3 py-1 rounded text-sm"
+                className="flex w-70 justify-between items-center mt-3 bg-amber-500 text-white  px-3 py-1 rounded-2xl text-sm align-middle"
               >
-                {music}
+                <img src = {getImage(music)}
+              alt = {music}
+              className="w-24 h-24 rounded-50 object-cover" />
+                <span className="text-2xl font-medium">{music}</span>
               </span>
             ))
           ) : (
@@ -64,8 +72,6 @@ return (
                
              </ul>
            </main>
-   
-         
    <Footer  />
   </>
 );
