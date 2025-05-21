@@ -8,7 +8,9 @@ import { NavLink } from "react-router-dom"
       <NavLink to="/login">
         <CaretLeftIcon className="h-6 w-6 text-white" />
       </NavLink>
-      <HouseIcon className="h-6 w-6 text-white w-fill" />
+      <NavLink to={"/login"}>
+<HouseIcon className="h-6 w-6 text-white w-fill" />
+      </NavLink>
       <NavLink to="/list-music">
         <CaretRightIcon className="h-6 w-6 text-white" />
       </NavLink>

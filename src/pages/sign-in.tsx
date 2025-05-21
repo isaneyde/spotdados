@@ -1,19 +1,15 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { EyeSlashIcon } from "@phosphor-icons/react";
 import { useState } from "react";
-import type { userRegister } from "../types/user-register";
-
-
 export const Sign = () => {
   //Style for the inputs
-  const style =
-    "border-1 rounded-3xl py-0 px-4 text-center bg-white min-w-75 max-w-100 h-10 border-amber-400";
+  const style = "border-1 rounded-3xl py-0 px-4 text-center bg-white min-w-75 max-w-100 h-10 border-amber-400";
   const Navigate = useNavigate();
 
   //States to change the input fields from empty to fill
   const [name, setName] = useState("");
   const [nickname, setNickname] = useState("");
-  const [email,setEmail]=useState("");
+  const [email, setEmail] = useState("");
   const [dateBirth, setDateBirth] = useState("");
   const [country, setCountry] = useState("");
   const [password, setPassword] = useState("");
@@ -21,11 +17,9 @@ export const Sign = () => {
   //Function to call when the submit button is clicked
   const validateFields = () => {
     if (name === "" && dateBirth === "" && country === "" && password === "") {
-<p className="block text-red-600 font-light size-2">Por favor, preecha os dados do formulário</p>
+      <p className="block text-red-600 font-light size-2">Por favor, preecha os dados do formulário</p>
       Navigate("/sign-in");
     } else {
-        const userData:userRegister[]=[]
-      alert(`Nome:${name}`);
       Navigate("/list-users");
     }
   };
@@ -57,7 +51,7 @@ export const Sign = () => {
               value={nickname}
               onChange={(event) => setNickname(event.target.value)}
             />
-             <input
+            <input
               className={style}
               type="email"
               placeholder="E-mail"
@@ -100,16 +94,16 @@ export const Sign = () => {
             >
               Criar conta
             </button>
-             <NavLink
-            className="text-amber-400 text-center font-bold font-mono "
-            to={"/login"}
-          >
-            Já tem conta? Clique aqui!
-          </NavLink>
+            <NavLink
+              className="text-amber-400 text-center font-bold font-mono "
+              to={"/login"}
+            >
+              Já tem conta? Clique aqui!
+            </NavLink>
           </form>
         </main>
       </div>
-       <EyeSlashIcon size={18} weight="fill" className="ml-76 -mt-74"  />
+      <EyeSlashIcon size={18} weight="fill" className="ml-76 -mt-74" />
     </>
   );
 };
