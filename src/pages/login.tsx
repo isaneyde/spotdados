@@ -23,9 +23,9 @@ export const Login = () => {
     }
   return (
     <>
-      <div className="min-h-screen  bg-black">
-        <h1 className="text-white text-center px-4 py-2 font-extrabold mb-10  ">
-          OLa, Bem-vindo(a)
+      <div className="min-h-screen bg-[url(/img/bg-4.png)] bg-black">
+        <h1 className="text-white text-center px-4 py-2 font-extrabold mb-4  ">
+          Olá, Bem-vindo(a)
         </h1>
         <div>
           <img src="public/img/spoti_logo.png" alt="" />
