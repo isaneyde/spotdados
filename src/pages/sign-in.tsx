@@ -1,6 +1,8 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { EyeSlashIcon } from "@phosphor-icons/react";
 import { useState } from "react";
+import type { userRegister } from "../types/user-register";
+
 export const Sign = () => {
   //Style for the inputs
   const style = "border-1 rounded-3xl py-0 px-4 text-center bg-white min-w-75 max-w-100 h-10 border-amber-400";
@@ -10,16 +12,18 @@ export const Sign = () => {
   const [name, setName] = useState("");
   const [nickname, setNickname] = useState("");
   const [email, setEmail] = useState("");
-  const [dateBirth, setDateBirth] = useState("");
   const [country, setCountry] = useState("");
   const [password, setPassword] = useState("");
 
   //Function to call when the submit button is clicked
   const validateFields = () => {
-    if (name === "" && dateBirth === "" && country === "" && password === "") {
+    if (name === ""  && email==="" && country === "" && password === "") {
       <p className="block text-red-600 font-light size-2">Por favor, preecha os dados do formulário</p>
       Navigate("/sign-in");
     } else {
+      const userData:userRegister[]=[];
+      userData.push({name, nickname,email,country,password});
+alert(userData);
       Navigate("/list-users");
     }
   };
@@ -58,15 +62,6 @@ export const Sign = () => {
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
-            <input
-              required
-              className={style}
-              type="date"
-              placeholder="date of birth"
-              value={dateBirth}
-              onChange={(event) => setDateBirth(event.target.value)}
-            />
-
             <input
               required
               className={style}
