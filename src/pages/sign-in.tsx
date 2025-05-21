@@ -23,14 +23,13 @@ export const Sign = () => {
     } else {
       const userData:userRegister[]=[];
       userData.push({name, nickname,email,country,password});
-alert(userData);
       Navigate("/list-users");
     }
   };
 
   return (
     <>
-      <div className="min-h-screen py-20  bg-[url(./img/background.png)]  bg-black">
+      <div className="min-h-screen py-20  bg-[url(/img/background.png)] bg-black">
         <div className="w-250px h-185px  mb-10 -mt-10">
           <img src="/img/spoti_logo.png" alt="spotdados logo" />
         </div>
