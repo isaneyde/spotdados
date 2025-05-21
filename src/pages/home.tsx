@@ -3,7 +3,7 @@ export const Home = () => {
     return (
 
         <body className="py-10 bg-[url(../img/bg-6.png)] bg-black text-black font-bold">
-            <div>
+            <div className="md:max-w-2xl">
                 <h1 className="font-YuseiMagic text-[32px] m-20 text-2xl text-center text-white"> Ola, bem vindo(a)</h1>
                 <img className="" alt="Logotipo" src="/img/spoti_logo.png" />
   <section className="">
