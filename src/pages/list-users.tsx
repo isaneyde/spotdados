@@ -1,12 +1,17 @@
 // UsersList.tsx
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import {UserIcon } from '@phosphor-icons/react';
+
 import { Header } from '../components/header';
 import { users } from '../data/data';
-import {UserSquareIcon } from '@phosphor-icons/react';
+import { Footer } from '../components/footer';
+
 
 export const UsersList = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [displayedUsers, setDisplayedUsers] = useState(users);
+  const navigate = useNavigate()
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
@@ -16,21 +21,21 @@ export const UsersList = () => {
     setDisplayedUsers(filtered);
   };
   const present = displayedUsers.map(user => (
-            <li  key={user.id} style={{marginBottom: '0.5rem', border: '5px solid #ccc', borderRadius: '20px' , padding: '0.5rem'}}>
-              <UserSquareIcon size={32} />{user.name}
+            <li  key={user.id} className="mb-10 w-80 flex bg-black px-6 py-6 border-4  rounded-3xl solid #ccc text-2xl border-white opacity-80 " onClick={()=>navigate('/list-music',{state:{user}})}>
+              <UserIcon size={40}  className='inline fill-amber-50'/>{user.name }
             </li>
           ))
 
   return (
     <>
-      <Header title="Usuários" search={handleSearch} entrySearch={searchQuery} />
-
-      <main style={{ height:'100 vh' ,padding: '1rem', background:'black', color:"white"}}>
-        <h2>Usuários</h2>
+      <Header title="Usuários"  search={handleSearch} entrySearch={searchQuery} />
+      <main className='flex flex-col flex-1 py-6 px-6 bg-[url(./img/bg-4.png)]  bg-black   text-amber-500 text font-bold  '>
+        <h2 className='text-3xl pb-5 text-amber-50'>Usuários</h2>
         <ul>
         {present}
         </ul>
       </main>
+      <Footer/>
     </>
   );
 };
