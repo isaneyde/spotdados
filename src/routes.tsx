@@ -22,6 +22,7 @@ const router = createBrowserRouter([
     path: "/list-music",
     element: <ListMusic/>,
   }
+
 ]);
 
 export function Routes() {
