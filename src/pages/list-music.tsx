@@ -1,21 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
 import type { userProps } from '../types/users'
+import { useLocation, useNavigate } from "react-router-dom";
 
 
-export const ListMusic = ({user}:{user:userProps}) => {
+export const ListMusic = () => {
   const [searchQuery, setSearchQuery] = useState('');
-const [details, setDetails] = useState<string[]>(user.mostListenedSongs);
+const [details, setDetails] = useState<string[]>([]);
+const {state} = useLocation();
+const navigate = useNavigate();
+const user:userProps | undefined = state?.user;;
+
+useEffect(()=>{
+  if(!user){
+    navigate('/list-users');
+  } else {
+    setDetails(user.mostListenedSongs)
+  }
+},[user,navigate])
 
 const handleSearch = (query: string) => {
   setSearchQuery(query);
-  const filtered = user.mostListenedSongs.filter((list) =>
+  const filtered = user?.mostListenedSongs.filter((list) =>
     list.toLowerCase().includes(query.toLowerCase())
-  )
+  ) || []
   setDetails(filtered);
 };
-
+ if (!user) return null
 return (
   <>
     <Header
@@ -24,39 +36,37 @@ return (
       title="Detalhes" 
     />
 
-    <main className="flex-1 overflow-y-auto px-4">
-             <h2 className="text-lg font-semibold my-3">Usuários</h2>
+    <main className="min-h-screen overflow-y-auto px-4 bg-[url(./img/bg-4.png)] bg-black">
+             <h2 className="text-lg font-semibold text-amber-50 my-3">Detalhes</h2>
              <ul className="space-y-3">
-                 <li className="border rounded-lg p-3 flex items-start"
+                 <li className="border-4 bg-black  border-amber-50   p-3 flex flex-col items-start rounded-3xl   "
                  >
-                   <div className="flex-1">
-                     <div className="mt-2">
                        <p className="text-sm text-gray-500">
                          Músicas mais ouvidas:
                        </p>
-                       <div className="flex flex-wrap gap-1 mt-1">
+                       <div className="flex flex-col gap-1 mt-1">
                          {details.length > 0 ? (
             details.map((music, i) => (
               <span
                 key={i}
-                className="bg-orange-500 text-white px-3 py-1 rounded text-sm"
+                className="bg-amber-500 text-white  px-3 py-1 rounded text-sm"
               >
                 {music}
               </span>
             ))
           ) : (
             <p className="text-gray-500">Nenhuma música encontrada…</p>
+          
+      
           )}
                        </div>
-                     </div>
-                   </div>
                  </li>
                
              </ul>
            </main>
    
          
-   <Footer />
+   <Footer  />
   </>
 );
 
