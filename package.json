@@ -4,15 +4,29 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "react-scripts start",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@tailwindcss/vite": "^4.1.7",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+=======
+    "@phosphor-icons/react": "^2.1.8",
+    "@tailwindcss/vite": "^4.1.7",
+<<<<<<< HEAD
+    "lucide-react": "^0.462.0",
+=======
+    "phosphor-icons": "^1.4.2",
+>>>>>>> g3
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.0",
+>>>>>>> edddcf7fce5c551f421293356d2911faf94d83c2
     "tailwindcss": "^4.1.7"
   },
   "devDependencies": {

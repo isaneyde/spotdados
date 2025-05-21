@@ -1,7 +1,5 @@
-
 <h1>🎧 SPOTDADOS</h1>
 <p>Este é um projecto colaborativo para um dispositivo móvel, criado com o objectivo de apresentar dados do histórico dos usuários do aplicativo de música. </p>
-
 <h2>FUNCIONALIDADES</h2>
 <ul>
   <li>
@@ -11,7 +9,7 @@
 ✅Pesquisar usuário;
   </li>
   <li>
-    ✅Ver histórico de cada usuário;
+    ✅Ver histórico de cada usuários
 
   </li>
 </ul>
@@ -24,13 +22,4 @@
     <li>  Meque Chiziane</li>
   <li>  Olga Macamo</li>
 </ul>
-
-
-
-
-
-
-
-
-
 
