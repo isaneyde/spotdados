@@ -19,17 +19,19 @@ export const Login = () => {
   
   return (
     <>
-      <div className="min-h-screen  bg-black">
-        <h1 className="text-white text-center px-4 py-2 font-extrabold mb-10 mt-16">
-          OLa, Bem-vindo(a)
+       
+        
+        <main className="min-h-screen bg-[url(./img/bg-4.png)] bg-black">
+        <div>  
+          <h1 className="text-white text-center px-4 py-2 text-3xl mb-10 mt-16 font-extrabold">
+          Olá, Bem-vindo(a)
         </h1>
+        </div>
         <div>
           <img src="public/img/spoti_logo.png" alt="" />
         </div>
-        <main>
-          
           <form className="flex flex-col justify-center items-center gap-10">
-            <label htmlFor="" className="text-white ">E-mail</label>
+            <label htmlFor="" className="text-white text-2xl">E-mail</label>
             <input
               className={style}
               type="text"
@@ -39,7 +41,7 @@ export const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <label htmlFor="" className="text-white ">Password</label>
+            <label htmlFor="" className="text-white text-2xl">Password</label>
             <input
               className={style}
               type="password"
@@ -64,7 +66,6 @@ export const Login = () => {
             color="black"
           />
         </main>
-      </div>
     </>
   );
 }
